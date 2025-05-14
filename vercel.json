@@ -1,0 +1,25 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "api/*.js",
+      "use": "@vercel/node"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/subscription",
+      "dest": "/api/subscription"
+    },
+    {
+      "src": "/webhook",
+      "dest": "/api/webhook"
+    }
+  ]
+}
+{
+  "scripts": {
+    "start": "node server.js",
+    "dev": "nodemon server.js"
+  }
+}
